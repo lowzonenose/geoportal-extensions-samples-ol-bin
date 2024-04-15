@@ -1,0 +1,97 @@
+{
+  "name": "geoportal-extensions-openlayers-samples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "doclets": "node build/doclets.js -p . -t src/data/",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "engines": {
+    "node": "~16.14.0",
+    "npm": "~8.3.1"
+  },
+  "dependencies": {
+    "@gouvfr/dsfr": "^1.11.0",
+    "file-saver": "^2.0.5",
+    "geoportal-access-lib": "3.4.0",
+    "geoportal-extensions-openlayers": "./geoportal-extensions-openlayers-1.0.0-beta.7.tgz",
+    "ol": "8.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/eslint-parser": "^7.24.1",
+    "@babel/preset-env": "^7.24.3",
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "@storybook/addon-essentials": "^8.0.5",
+    "@storybook/addon-interactions": "^8.0.5",
+    "@storybook/addon-links": "^8.0.5",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
+    "@storybook/blocks": "^8.0.5",
+    "@storybook/test": "^8.0.5",
+    "@storybook/vue3": "^8.0.5",
+    "@storybook/vue3-webpack5": "^8.0.5",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "~5.0.8",
+    "@vue/compiler-sfc": "^3.4.21",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "common-tags": "^1.8.0",
+    "dataobject-parser": "^1.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "eslint-plugin-vue": "^9.24.0",
+    "highlight.js": "^11.9.0",
+    "html-webpack-tags-plugin": "^3.0.2",
+    "jsdoc": "^4.0.2",
+    "merge-deep": "^3.0.3",
+    "storybook": "^8.0.5",
+    "vue": "^3.4.21",
+    "vue-loader": "^17.4.2",
+    "vue-router": "^4.3.0",
+    "vuejs3-logger": "^1.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "plugin:storybook/recommended"
+    ],
+    "rules": {
+      "vue/no-mutating-props": [
+        "error",
+        {
+          "shallowOnly": true
+        }
+      ]
+    },
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "keywords": [
+    "vuejs",
+    "geoportal-extensions",
+    "openlayers",
+    "Geoportail"
+  ],
+  "description": "Projet des exemples des widgets du Geoportail"
+}
